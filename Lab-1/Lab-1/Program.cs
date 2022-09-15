@@ -12,13 +12,13 @@ class Lab1Class
 {
     static void Main(string[] args)
     {
-        Lab1Metod();
+        Lab1Metod("29535123p48723487597645723645");
     }
-    static void Lab1Metod()
+
+    static void Lab1Metod(string input)
     {
         long sum = 0;
 
-        string input = "29535123p48723487597645723645";
         Console.WriteLine(input);
 
         //loopa för att ha ena delen för jämförelsen
@@ -36,13 +36,12 @@ class Lab1Class
                 //Om det är siffra, leta efter matchande siffra
                 else if (input[i] == input[j])
                 {
-
                     string middle = input.Substring(i, j+1-i);
                     // KAN OCKSÅ SKRIVAS SOM
                     // string temp2 = input[i..(j + 1)];
-
                     string start = input.Substring(0, i);
                     string end = input.Substring(start.Length + middle.Length);
+
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.Write(start);
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
